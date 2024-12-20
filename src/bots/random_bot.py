@@ -8,6 +8,7 @@ class RandomBot(BaseBot):
         self.order_quantity = order_quantity
         self.max_price = max_price
         self.last_order_time = 0
+        self.type = "random"
 
     def act(self, market, timestamp):
         if timestamp - self.last_order_time >= self.order_interval:

@@ -10,12 +10,10 @@ class Market:
 
     def place_order(self, order_type, price, quantity, bot_id, timestamp):
         order = self.order_book.add_order(order_type, price, quantity, bot_id, timestamp)
-        self.events.append(Event(timestamp))
         return order
     
     def cancel_order(self, order_id, timestamp):
         self.order_book.remove_order(order_id)
-        self.events.append(Event(timestamp))
 
     def process_orders(self, timestamp):
         trades = self.order_book.match_orders()
