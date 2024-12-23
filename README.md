@@ -34,6 +34,7 @@ Trading bots:
     - Change order_quantity to change the order size.
     - Change time_offset_interval to change it's trade timing.
 4. SmartMMBot: A more adaptive market maker that adjusts both its spread and order size based on inventory levels and realized PnL. It continually tries to manage risk by widening quotes if its inventory grows too large or if its PnL drops, and narrowing quotes when conditions improve.
+- Parameters:
     - spread: Wider spreads reduce fill frequency but can yield higher profit per trade.
     - order_quantity: Higher quantities mean more potential profit and risk on each trade.
     - inventory_target and max_inventory: If inventory drifts from the target or exceeds max limits, spreads widen and/or order sizes shrink to reduce further accumulation.
