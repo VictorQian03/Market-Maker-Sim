@@ -12,7 +12,7 @@ The simulation makes the following assumptions:
 1. Discrete Time: The simulation operates in discrete time steps.
 2. Price-Time Priority: The order book matches orders based on price and then time of entry.
 3. Limit Order Book: Only limit orders can be placed into the book.
-4. Trade Execution: Matched orders execute at the best ask price (for buy orders) or best bid price (for sell orders).
+4. Trade Execution: Matched orders execute at the best ask price (for buy orders) or best bid price (for sell orders). Execution order is randomized at each time step. 
 5. Market Impact: Trades do not have a market impact, other than clearing limit orders.
 6. No Transaction Costs: No trading fees or slippage are modeled.
 
