@@ -16,12 +16,6 @@ class SimpleMMBot(BaseBot):
         if not self.has_placed_initial_orders:
             buy_price = 50 - self.spread / 2 
             sell_price = 50 + self.spread / 2
-            
-            buy_quantity = self.order_quantity + random.randint(-self.order_size_variance, self.order_size_variance)
-            sell_quantity = self.order_quantity + random.randint(-self.order_size_variance, self.order_size_variance)
-
-            self.place_order(market, 'buy', buy_price, buy_quantity, timestamp)
-            self.place_order(market, 'sell', sell_price, sell_quantity, timestamp)
             self.has_placed_initial_orders = True
 
         mid_price = market.order_book.get_mid_price()
